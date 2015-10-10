@@ -1,6 +1,6 @@
 var interval = self.setInterval(findLocation, 120000);   //search for location every two minutes
 
-function findLocation() {
+function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 30.25, lng: 97.75},
     zoom: 12
