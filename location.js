@@ -21,10 +21,10 @@ function initMap() {
 
       var cityCircle = new google.maps.Circle({
       strokeColor: '#FF0000',
-      strokeOpacity: 0.8,
+      strokeOpacity: 0.0,
       strokeWeight: 2,
       fillColor: '#FF0000',
-      fillOpacity: 0.35,
+      fillOpacity: 0.0,
       map: map,
       center: pos,
       radius: 1609    // 1 mi. radius
