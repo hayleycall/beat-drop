@@ -18,6 +18,19 @@
       <script src='app.js'></script>
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+
   </head>
   <body>
       <div class="header clearfix">
@@ -45,5 +58,24 @@
       <img src="assets/images/logo.jpg" style="width:80px;height:80px">
       <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A43wtbrVn3ZSN8sz5MLgg4C" width="500" height="80" frameborder="0" allowtransparency="true"></iframe></li>
 </ul>
+
+
+    </div><!-- /.container -->
+
+    <div id="map" class='container'></div>
+
+		<script src='location.js'></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_r2Jz0WWkxXoZwfcFBotPCDvOBpN-IEw&signed_in=true&callback=initMap"
+		        async defer>
+        </script>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
   </body>
 </html>
