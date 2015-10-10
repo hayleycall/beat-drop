@@ -1,8 +1,8 @@
-var interval = self.setInterval(initMap, 120000);   //search for location every two minutes
+var interval = self.setInterval(findLocation, 120000);   //search for location every two minutes
 
-function initMap() {
+function findLocation() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
+    center: {lat: 30.25, lng: 97.75},
     zoom: 12
   });
   var infoWindow = new google.maps.InfoWindow({map: map});
@@ -18,6 +18,17 @@ function initMap() {
       infoWindow.setPosition(pos);
       infoWindow.setContent('Location found.');
       map.setCenter(pos);
+
+      var cityCircle = new google.maps.Circle({
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FF0000',
+        fillOpacity: 0.35,
+        map: map,
+        center: pos,
+        radius: 1609    // 1 mi. radius
+      });
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
@@ -32,5 +43,5 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setContent(browserHasGeolocation ?
                         'Error: The Geolocation service failed.' :
                         'Error: Your browser doesn\'t support geolocation.');
-  //document.location="error.html";
+  document.location="error.html";
 }
