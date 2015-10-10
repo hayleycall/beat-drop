@@ -19,6 +19,10 @@ function findLocation() {
       infoWindow.setContent('Location found.');
       map.setCenter(pos);
 
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+
       var cityCircle = new google.maps.Circle({
         strokeColor: '#FF0000',
         strokeOpacity: 0.8,
@@ -29,9 +33,6 @@ function findLocation() {
         center: pos,
         radius: 1609    // 1 mi. radius
       });
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
