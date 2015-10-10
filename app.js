@@ -1,3 +1,4 @@
+//code from https://github.com/watsonbox/exportify
 window.Helpers = {
   authorize: function() {
     var client_id = this.getQueryParam('app_client_id');
