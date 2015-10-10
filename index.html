@@ -5,14 +5,20 @@
 <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
 </head>
 <body>
-
-
   <script type="text/javascript">
     Parse.initialize("lCimP1eaX0g8eg8oDbUNgOecvg38wiIpEpVglNhW", "HbZ0EvF7zNVr7q07CtMOFjNDfX6Ntxl78wPAqX2p");
-    
+
     var LocationtoList = Parse.Object.extend("LocationToList");
     var LocationToList = new LocationToList();
-      LocationToList.save({location: "oject that represents location here"}, {songlist: "object that represents list of songs here");
+      LocationToList.save({location: "location"} {songlist: "songlist"}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+
   </script>
 </body>
 </html>
