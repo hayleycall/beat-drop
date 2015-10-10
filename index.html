@@ -9,12 +9,12 @@
     Parse.initialize("lCimP1eaX0g8eg8oDbUNgOecvg38wiIpEpVglNhW", "HbZ0EvF7zNVr7q07CtMOFjNDfX6Ntxl78wPAqX2p");
 
     var LocationtoList = Parse.Object.extend("LocationToList");
-    var LocationToList = new LocationToList();
-      LocationToList.save({location: "location"} {songlist: "songlist"}, {
-      success: function(object) {
+    var locationToList = new LocationToList();
+      locationToList.save({location: "location", songlist: "songlist"}, {
+      success: function(locationtoList) {
         $(".success").show();
       },
-      error: function(model, error) {
+      error: function(locationtoList, error) {
         $(".error").show();
       }
     });
